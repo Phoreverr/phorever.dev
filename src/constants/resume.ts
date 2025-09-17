@@ -81,8 +81,8 @@ const skills: Skill[] = [
     body: ['JavaScript', 'TypeScript', 'Python'],
   },
   {
-    title: 'Frameworks/Libraries',
-    body: ['Reactjs','Nextjs', 'Redux', 'ReactQuery', 'Material-UI', 'TailwindCSS', 'Three.js', 'Antd'],
+    title: 'Stacks',
+    body: ['Reactjs','Nextjs', 'Redux', 'ReactQuery', "NextAuth", 'Material-UI', 'TailwindCSS', 'Three.js', 'Antd'],
   },
   {
     title: 'Tooling',
