@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import 'antd/dist/reset.css';
 import './App.scss';
 import logo from './assets/imgs/logo128.png';
 import Base from './components/Base/base';

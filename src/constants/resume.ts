@@ -82,11 +82,11 @@ const skills: Skill[] = [
   },
   {
     title: 'Stacks',
-    body: ['Reactjs','Nextjs', 'Redux', 'ReactQuery', "NextAuth", 'Material-UI', 'TailwindCSS', 'Three.js', 'Antd'],
+    body: ['Reactjs', 'Nextjs', 'Redux', 'ReactQuery', "NextAuth", 'Material-UI', 'TailwindCSS', 'Three.js', 'Antd'],
   },
   {
     title: 'Tooling',
-    body: ['Git', 'Docker', 'GCP'],
+    body: ['Git', 'Docker', 'GCP', 'Firebase', 'Stripe', 'NPM', 'VSCode', 'Figma', 'Canva', 'Jira', 'Trello', 'And more...'],
   },
 ];
 
