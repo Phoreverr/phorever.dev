@@ -82,7 +82,7 @@ const skills: Skill[] = [
   },
   {
     title: 'Stacks',
-    body: ['Reactjs', 'Nextjs', 'Redux', 'ReactQuery', "NextAuth", 'Material-UI', 'TailwindCSS', 'Three.js', 'Antd'],
+    body: ['Reactjs', 'Nextjs', 'Redux', 'i18n', 'ReactQuery', "NextAuth", 'Material-UI', 'TailwindCSS', 'Three.js', 'Antd'],
   },
   {
     title: 'Tooling',
@@ -93,7 +93,7 @@ const skills: Skill[] = [
 const educations: Education[] = [
   {
     title: 'B.Sc Building at Obafemi Awolowo University',
-    endDate: 'MAY 2025',
+    endDate: 'Nov 2024',
     relevant: [],
   },
   {
