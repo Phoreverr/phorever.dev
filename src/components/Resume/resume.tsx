@@ -6,12 +6,12 @@ import './resume.scss';
 
 type ResumeProp = {
   menu?: string[];
-  activeMenu: (arg: number) => void;
+  activeMenu?: (arg: number) => void;
 };
 
 export default function Resume(props: ResumeProp) {
   useEffect(() => {
-    props.activeMenu(0);
+    props.activeMenu?.(0);
   }, []);
 
   return (

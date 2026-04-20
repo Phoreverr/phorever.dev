@@ -2,7 +2,7 @@ import React, { Component, useEffect } from 'react';
 import Base from './base';
 import './mobile.scss';
 
-export default function Mobile({ menu }: any) {
+export default function Mobile() {
   useEffect(() => {
     document.querySelector('.mobile_container')?.classList.add('set_height');
 
@@ -13,7 +13,7 @@ export default function Mobile({ menu }: any) {
 
   return (
     <div id="mobile">
-      <Base menu={menu} />
+      <Base />
     </div>
   );
 }

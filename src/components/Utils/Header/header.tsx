@@ -37,12 +37,12 @@ export default function Header() {
               </li>
               <li>
                 <Link to="/projects" onClick={toggleMenu}>
-                  Projects
+                  Work
                 </Link>
               </li>
               <li>
                 <a href={portfolioCvUrl} target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
-                  CV / Résumé
+                  CV
                 </a>
               </li>
             </ul>

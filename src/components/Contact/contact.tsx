@@ -6,12 +6,12 @@ import './contact.scss';
 
 interface IProp {
   menu?: string[];
-  activeMenu: (arg: number) => void;
+  activeMenu?: (arg: number) => void;
 }
 
 export default function Contact(props: IProp) {
   useEffect(() => {
-    props.activeMenu(0);
+    props.activeMenu?.(0);
   }, []);
 
   return (

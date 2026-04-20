@@ -10,7 +10,6 @@ import Projects from './components/Projects/projects';
 import Header from './components/Utils/Header/header';
 
 function App() {
-  const [menu, setMenu] = useState<string[]>(['active_menu', '']);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,12 +17,6 @@ function App() {
       setLoading(false);
     }, 300);
   }, []);
-
-  const activeMenu = (id: number) => {
-    if (id === 0) {
-      setMenu(() => ['active_menu', '']);
-    }
-  };
 
   return (
     <div className="App">
@@ -37,8 +30,8 @@ function App() {
             <Header />
             <div>
               <Routes>
-                <Route path="/" element={<Mobile menu={menu} />} />
-                <Route path="/projects" element={<Projects menu={menu} activeMenu={activeMenu} />} />
+                <Route path="/" element={<Mobile />} />
+                <Route path="/projects" element={<Projects />} />
                 <Route path="/resume" element={<Navigate to="/projects" replace />} />
                 {/* <Route path="/contact" element={<Contact menu={menu} activeMenu={activeMenu} />} /> */}
                 <Route element={<Error />} />
@@ -56,13 +49,13 @@ function App() {
 
           <div className="app-container">
             <div className="m-fixed">
-              <Base menu={menu} />
+              <Base />
             </div>
             <div className="main">
               <div className="pages_container">
                 <Routes>
-                  <Route path="/" element={<Projects menu={menu} activeMenu={activeMenu} />} />
-                  <Route path="/projects" element={<Projects menu={menu} activeMenu={activeMenu} />} />
+                  <Route path="/" element={<Projects />} />
+                  <Route path="/projects" element={<Projects />} />
                   <Route path="/resume" element={<Navigate to="/projects" replace />} />
                   {/* <Route path="/contact" element={<Contact menu={menu} activeMenu={activeMenu} />} /> */}
                   <Route element={<Error />} />

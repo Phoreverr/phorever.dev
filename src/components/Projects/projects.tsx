@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import Project from '../Utils/Project/project';
@@ -17,11 +17,6 @@ type Project = {
   isPrivate: boolean;
   isLive: boolean;
   isUiDemo?: boolean;
-};
-
-type Prop = {
-  menu?: string[];
-  activeMenu: (arg: number) => void;
 };
 
 const projects: Project[] = [
@@ -154,11 +149,7 @@ const demoUiProjects: Project[] = [
   },
 ];
 
-export default function Projects(props: Prop) {
-  useEffect(() => {
-    props.activeMenu(0);
-  }, []);
-
+export default function Projects() {
   return (
     <div className="project">
       <Helmet

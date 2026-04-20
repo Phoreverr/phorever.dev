@@ -143,5 +143,5 @@ export const resume: Resume = {
   hobbies,
 };
 
-/** Public FlowCV / online résumé link (portfolio CTAs). */
+/** Public FlowCV / online CV link (portfolio CTAs). */
 export const portfolioCvUrl = 'https://flowcv.com/resume/dg90oefwfw';

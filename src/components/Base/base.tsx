@@ -5,7 +5,7 @@ import myPic from '../../assets/imgs/my-pic.jpg';
 import arrow from '../../assets/svgs/arrow.svg';
 import './base.scss';
 
-export default function Base({ menu }: any) {
+export default function Base() {
   return (
     <div className="base_container">
       <div className="hero">
@@ -55,16 +55,6 @@ export default function Base({ menu }: any) {
         </div>
       </div>
 
-      <nav>
-        <ul>
-          <li className={menu[0]}>
-            <small>
-              <Link to="/projects">PROJECTS</Link>
-            </small>
-          </li>
-        </ul>
-      </nav>
-
       <div className="footer">
         <img className="w-16 h-16 rounded-full" src={myPic} alt="" />
         <div className="social">
@@ -78,7 +68,7 @@ export default function Base({ menu }: any) {
           </a>
 
           <a href={portfolioCvUrl} target="_blank" rel="noopener noreferrer">
-            <i className="far fa-file-alt"></i> CV / Résumé <img src={arrow} alt="pointer" />
+            <i className="far fa-file-alt"></i> CV <img src={arrow} alt="pointer" />
           </a>
         </div>
       </div>
