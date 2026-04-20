@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { resume } from '@/constants/resume';
+import { portfolioCvUrl, resume } from '@/constants/resume';
 import myPic from '../../assets/imgs/my-pic.jpg';
 import arrow from '../../assets/svgs/arrow.svg';
 import navLine from '../../assets/svgs/menu-line.svg';
@@ -22,8 +22,10 @@ export default function Base({ menu }: any) {
         <div className="description">
           <p>
             <span>
-              I'm a <span className="highlight">Software Engineer</span> and{' '}
-              <span className="highlight">Cloud enthusiast </span> with passion for problem-solving, skilled in delivering performant and scalable frontend solutions with a strong focus on clean code and great user experiences
+              I'm a <span className="highlight">Frontend Engineer</span>: I build responsive, performant UIs and
+              care about product polish and maintainable code. On the side I'm a{' '}
+              <span className="highlight">Cloud Engineer</span>—GCP is my main platform—for secure deployments,
+              networking, and infrastructure that keeps apps reliable in production.
             </span>
           </p>
         </div>
@@ -44,8 +46,13 @@ export default function Base({ menu }: any) {
 
         <div className="go_button_container">
           <Link to="/projects">
-            <button className="explore">Explore ➜</button>
+            <button type="button" className="explore">
+              Explore ➜
+            </button>
           </Link>
+          <a className="base_cv_link" href={portfolioCvUrl} target="_blank" rel="noopener noreferrer">
+            View CV ↗
+          </a>
         </div>
       </div>
 
@@ -72,6 +79,10 @@ export default function Base({ menu }: any) {
 
           <a href="https://linkedin.com/in/phorever" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i> LinkedIn <img src={arrow} alt="pointer" />
+          </a>
+
+          <a href={portfolioCvUrl} target="_blank" rel="noopener noreferrer">
+            <i className="far fa-file-alt"></i> CV / Résumé <img src={arrow} alt="pointer" />
           </a>
         </div>
       </div>

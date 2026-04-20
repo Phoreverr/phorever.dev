@@ -106,6 +106,10 @@ const educations: Education[] = [
 
 const certifications: Certification[] = [
   {
+    title: 'Google Cloud - Professional Cloud Developer Certification',
+    date: 'Mar 2026',
+  },
+  {
     title: 'Google Cloud - Professional Cloud Architect Certification',
     date: 'SEPT 2024',
   },
@@ -138,3 +142,6 @@ export const resume: Resume = {
   languages,
   hobbies,
 };
+
+/** Public FlowCV / online résumé link (portfolio CTAs). */
+export const portfolioCvUrl = 'https://flowcv.com/resume/dg90oefwfw';

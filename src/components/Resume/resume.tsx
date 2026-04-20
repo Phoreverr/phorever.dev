@@ -1,4 +1,4 @@
-import { resume } from '@/constants/resume';
+import { portfolioCvUrl, resume } from '@/constants/resume';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Helmet from '../Utils/SEO/helmet';
@@ -22,7 +22,7 @@ export default function Resume(props: ResumeProp) {
           <h2>{resume.name}</h2>
           <div className="buttons">
             <a
-              href="https://flowcv.com/resume/dg90oefwfw"
+              href={portfolioCvUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
