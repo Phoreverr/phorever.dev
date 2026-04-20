@@ -171,6 +171,11 @@ export default function Projects(props: Prop) {
         <h2 id="projects-shipped-heading" className="project_section_title">
           Client &amp; product work
         </h2>
+        <p className="project_section_lede">
+          Production work and shipped products—web apps, customer-facing sites, and shared libraries I've helped
+          build or own end to end with real users and constraints. Each card links to a live product or package where
+          that's public; private engagements are marked accordingly.
+        </p>
         <div className="group portfolio_showcase">
           {projects.map((project) => (
             <Project key={project.id} {...project} />
@@ -183,7 +188,9 @@ export default function Projects(props: Prop) {
           UI skill demos
         </h2>
         <p className="project_section_lede">
-          Standalone interfaces that highlight layout, interaction, and visual design—separate from shipped products.
+          Standalone interfaces built as UI demos to highlight layout, interaction, and visual design—separate from
+          shipped products. Names, metrics, testimonials, pricing, and other on-screen data are illustrative only and
+          not real.
         </p>
         {demoUiProjects.length > 0 ? (
           <div className="group portfolio_showcase">

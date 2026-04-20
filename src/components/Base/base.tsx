@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { portfolioCvUrl, resume } from '@/constants/resume';
 import myPic from '../../assets/imgs/my-pic.jpg';
 import arrow from '../../assets/svgs/arrow.svg';
-import navLine from '../../assets/svgs/menu-line.svg';
 import './base.scss';
 
 export default function Base({ menu }: any) {
@@ -60,10 +59,7 @@ export default function Base({ menu }: any) {
         <ul>
           <li className={menu[0]}>
             <small>
-              00
-              <Link to="/projects">
-                <img src={navLine} alt="menu bullet" /> PROJECTS
-              </Link>
+              <Link to="/projects">PROJECTS</Link>
             </small>
           </li>
         </ul>

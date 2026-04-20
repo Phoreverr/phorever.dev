@@ -118,8 +118,9 @@ export default function Project(props: IProject) {
           <p style={{ marginBottom: '20px', lineHeight: '1.6' }}>{stack}</p>
 
           {isPrivate && isUiDemo && (
-            <p style={{ color: '#888', fontStyle: 'italic' }}>
-              <i className="fas fa-palette"></i> UI showcase—repository not linked here.
+            <p style={{ color: '#888', fontStyle: 'italic', lineHeight: 1.55 }}>
+              <i className="fas fa-palette"></i> UI demo—repository not linked here. All figures, copy, and business
+              details in the live preview are placeholder content for layout and are not factual.
             </p>
           )}
           {isPrivate && !isUiDemo && (

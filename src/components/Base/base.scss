@@ -141,37 +141,16 @@ nav {
         color: inherit;
     }
 
-    ul li a img {
-        margin: 0 10px;
-        width: 30px;
-        pointer-events: none;
-        transition: width 0.3s linear;
-        opacity: 0.5;
-    }
-
     ul li.active_menu {
         opacity: 1;
         transition: all 0.3s linear;
         color: #fff;
     }
 
-    ul li.active_menu a img {
-        margin: 0 10px;
-        width: 50px;
-        transition: width 0.3s linear;
-        opacity: 1;
-    }
-
     ul li:hover {
         opacity: 1;
         transition: all 0.3s linear;
         color: #fff;
-    }
-
-    ul li:hover a img {
-        margin: 0 10px;
-        width: 50px;
-        transition: width 0.3s linear;
     }
 }
 
