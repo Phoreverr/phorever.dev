@@ -11,7 +11,7 @@ interface IProp {
 
 export default function Contact(props: IProp) {
   useEffect(() => {
-    props.activeMenu(2);
+    props.activeMenu(0);
   }, []);
 
   return (
@@ -19,9 +19,9 @@ export default function Contact(props: IProp) {
       <Helmet title="Contact Me" name="Contact Forever Oluwayomi" content="Reach out to Forever Oluwayomi" />
       <Form />
       <div className="go_button_container">
-        <Link to="/resume">
+        <Link to="/projects">
           <button>
-            <b>➜ </b> Résumé
+            <b>➜ </b> Projects
           </button>
         </Link>
         <Link to="/">

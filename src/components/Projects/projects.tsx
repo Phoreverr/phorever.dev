@@ -16,6 +16,7 @@ type Project = {
   stack: string;
   isPrivate: boolean;
   isLive: boolean;
+  isUiDemo?: boolean;
 };
 
 type Prop = {
@@ -24,17 +25,6 @@ type Prop = {
 };
 
 const projects: Project[] = [
-  {
-    id: uuid(),
-    title: 'Phorever',
-    shortDescription: 'My Portfolio Website',
-    longDescription: 'My Portfolio Website',
-    github: 'https://github.com/Phoreverr/phorever.dev',
-    live: 'https://phorever-dev.vercel.app/',
-    stack: 'React + TypeScript + SASS',
-    isPrivate: false,
-    isLive: true,
-  },
   {
     id: uuid(),
     title: 'NPM-Package: OpenCDP-Editor',
@@ -54,8 +44,8 @@ Key Features & Technical Highlights:
 • Functionality: Implements core rich text editing features, including formatting (bold, italics, lists), block management, and potentially media embedding.
 
 • Architecture: Designed as a reusable NPM package, emphasizing clear component structure, prop-based configuration, and maintainability for easy integration into various projects.`,
-    github: 'https://github.com/code-matic/openCDP-editor',
-    live: 'https://www.npmjs.com/package/@codematic.io/open-cdp-editor?activeTab=readme',
+    github: 'https://www.npmjs.com/package/@codematic.io/cdp-editor',
+    live: 'https://cdp-editor-064.web.app/',
     stack: 'React + Webpack + TypeScript + TailwindCSS',
     isPrivate: false,
     isLive: true,
@@ -69,6 +59,22 @@ Key Features & Technical Highlights:
 The focus of the residence is to provide an exclusive, high-end experience, likely featuring private amenities, customized services, and a premium location for discerning guests in the city of Lagos. The platform appeals to those seeking luxury accommodations, private retreats, or bespoke event spaces in a resort-style setting.`,
     github: '',
     live: 'https://www.havara.com/',
+    stack: 'Nextjs + ReactQuery + TypeScript + TailwindCSS + API Integration',
+    isPrivate: true,
+    isLive: true,
+  },
+  {
+    id: uuid(),
+    title: 'Conviso',
+    shortDescription:
+      'Behavioural messaging for growing teams—automated journeys across email, WhatsApp, and push in one platform.',
+    longDescription: `Conviso delivers it across Email, WhatsApp and Push automatically, and at a fraction of what Braze or Customer.io costs you.
+
+Conviso is a behavioural messaging platform for growing teams: it turns user signals into automated engagement across email, WhatsApp, and push. The product brings segmentation, journeys, and multi-channel delivery into one place so teams can re-engage signups and reduce churn without stitching together separate tools.
+
+The frontend is built with the same stack as Havara—Next.js, React Query, TypeScript, Tailwind CSS, and API integration—for a fast, consistent marketing and product experience.`,
+    github: '',
+    live: 'https://conviso.ai/',
     stack: 'Nextjs + ReactQuery + TypeScript + TailwindCSS + API Integration',
     isPrivate: true,
     isLive: true,
@@ -93,41 +99,58 @@ The focus of the residence is to provide an exclusive, high-end experience, like
     isPrivate: true,
     isLive: true,
   },
-  {
-    id: uuid(),
-    title: 'Golden Complaince',
-    shortDescription: 'A professional consulting website',
-    longDescription: 'Golden Compliance, a professional consulting website built to help businesses navigate complex regulatory and compliance challenges. I developed this site using HTML, Tailwind CSS, and JavaScript, and implemented a multilanguage feature so users can view content in multiple languages. The site outlines services such as governance & senior-management compliance, ESG (environmental, social, governance), risk, regulatory reporting, financial-crime mitigation, and operational resilience.',
-    github: '',
-    live: 'https://goldencompliance.com',
-    stack: 'HTML + TailwindCSS + JavaScript, + i18n',
-    isPrivate: true,
-    isLive: true,
-  },
 ];
+
+// Standalone UI showcases (live URL, optional public github + isPrivate: false).
+const demoUiProjects: Project[] = [];
 
 export default function Projects(props: Prop) {
   useEffect(() => {
-    props.activeMenu(1);
+    props.activeMenu(0);
   }, []);
 
   return (
     <div className="project">
-      <Helmet title="My Projects" name="Selected Projects" content="Selected Forever Oluwayomi's Projects" />
-      <div className="group portfolio_showcase">
-        {projects.map((project) => (
-          <Project key={project.id} {...project} />
-        ))}
-      </div>
+      <Helmet
+        title="My Projects"
+        name="Selected Projects"
+        content="Selected Forever Oluwayomi's shipped work and UI skill demos"
+      />
+
+      <section className="project_section" aria-labelledby="projects-shipped-heading">
+        <h2 id="projects-shipped-heading" className="project_section_title">
+          Client &amp; product work
+        </h2>
+        <div className="group portfolio_showcase">
+          {projects.map((project) => (
+            <Project key={project.id} {...project} />
+          ))}
+        </div>
+      </section>
+
+      <section className="project_section project_section--demos" aria-labelledby="projects-demos-heading">
+        <h2 id="projects-demos-heading" className="project_section_title">
+          UI skill demos
+        </h2>
+        <p className="project_section_lede">
+          Standalone interfaces that highlight layout, interaction, and visual design—separate from shipped products.
+        </p>
+        {demoUiProjects.length > 0 ? (
+          <div className="group portfolio_showcase">
+            {demoUiProjects.map((project) => (
+              <Project key={project.id} {...project} />
+            ))}
+          </div>
+        ) : (
+          <p className="project_section_empty">More standalone interface studies will appear here.</p>
+        )}
+      </section>
 
       <div className="go_button_container">
         <Link to="/">
           <button>
             <b>➜ </b> Home
           </button>
-        </Link>
-        <Link to="/resume">
-          <button>Résumé ➜ </button>
         </Link>
       </div>
     </div>

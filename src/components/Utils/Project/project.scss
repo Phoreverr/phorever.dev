@@ -3,6 +3,8 @@
   background-color: #16161a;
   margin: 0.5%;
   transition: 0.25s;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .box_container:hover {
@@ -21,22 +23,37 @@
   cursor: pointer;
 
   .project_details h3 {
-    margin: 0;
+    margin: 0 0 0.35rem;
     font-size: var(--project-font);
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
 
-  .project_details p {
+  .project_card_summary {
+    margin: 0;
+    padding: 0;
     font-size: var(--normal-font);
-    line-height: 21px;
-    color: #777778;
-    height: 5rem;
-    font-family: 'air-light';
+    line-height: 1.5;
+    color: #9a9a9b;
+    font-family: 'air-light', sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 0;
   }
 
-  .project_details small {
-    margin-bottom: 13px;
+  .project_card_stack {
+    display: block;
+    margin: 1rem 0 0.85rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     font-size: var(--small-font);
-    color: grey;
+    line-height: 1.45;
+    color: #6e6e70;
+    letter-spacing: 0.02em;
   }
 
   .project_links a {
@@ -59,7 +76,8 @@
     margin: 4%;
   }
 
-  .box .project_details p {
-    height: 4rem;
+  .project_card_summary {
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
   }
 }

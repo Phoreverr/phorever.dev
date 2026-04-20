@@ -39,11 +39,6 @@ export default function Header() {
                   Projects
                 </Link>
               </li>
-              <li>
-                <Link to="/resume" onClick={toggleMenu}>
-                  Résumé
-                </Link>
-              </li>
             </ul>
 
             <div className="social_box">

@@ -13,10 +13,12 @@ interface IProject {
   stack: string;
   isPrivate: boolean;
   isLive: boolean;
+  /** When true with isPrivate, modal copy reflects a UI showcase instead of client confidentiality. */
+  isUiDemo?: boolean;
 }
 
 export default function Project(props: IProject) {
-  const { title, shortDescription, longDescription, github, live, stack, isPrivate, isLive, github2 } = props;
+  const { title, shortDescription, longDescription, github, live, stack, isPrivate, isLive, github2, isUiDemo } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -36,9 +38,9 @@ export default function Project(props: IProject) {
       <div className="box_container md:hover:shadow-xs md:hover:z-50" onClick={showModal} style={{ cursor: 'pointer' }}>
         <div className="box">
           <div className="project_details">
-            <h3> {title} </h3>
-            <p className='!mb-4'> {shortDescription} </p>
-            <small className="py-3 mt-4"> {stack} </small>
+            <h3>{title}</h3>
+            <p className="project_card_summary">{shortDescription}</p>
+            <small className="project_card_stack">{stack}</small>
           </div>
 
           <div className="project_links">
@@ -115,7 +117,12 @@ export default function Project(props: IProject) {
           <h4 style={{ marginBottom: '12px', fontSize: '16px', fontWeight: '600' }}>Tech Stack</h4>
           <p style={{ marginBottom: '20px', lineHeight: '1.6' }}>{stack}</p>
 
-          {isPrivate && (
+          {isPrivate && isUiDemo && (
+            <p style={{ color: '#888', fontStyle: 'italic' }}>
+              <i className="fas fa-palette"></i> UI showcase—repository not linked here.
+            </p>
+          )}
+          {isPrivate && !isUiDemo && (
             <p style={{ color: '#888', fontStyle: 'italic' }}>
               <i className="fas fa-lock"></i> This is a private project
             </p>

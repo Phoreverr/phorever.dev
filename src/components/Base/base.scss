@@ -27,6 +27,52 @@
     }
 }
 
+.certifications {
+  margin-top: 1.5rem;
+  padding-right: 20%;
+}
+
+.certifications_heading {
+  font-size: var(--semi-font);
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.certifications_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.certifications_item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.certifications_name {
+  font-size: var(--small-font);
+  line-height: 1.45;
+  color: #cecece;
+}
+
+.certifications_date {
+  font-size: var(--xsmall-font);
+  color: #777778;
+  font-family: 'air-light', sans-serif;
+}
+
 .description {
   display: flex;
   padding-right: 20%;

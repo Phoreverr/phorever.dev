@@ -2,6 +2,45 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    .project_section {
+        width: 100%;
+        margin-bottom: 2.5rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .project_section_title {
+        font-size: var(--project-font);
+        font-weight: 600;
+        margin: 0 0 0.35rem;
+        letter-spacing: 0.02em;
+    }
+
+    .project_section_lede {
+        font-size: var(--normal-font);
+        color: #777778;
+        line-height: 1.5;
+        max-width: 42rem;
+        margin: 0 0 1.25rem;
+        font-family: 'air-light', sans-serif;
+    }
+
+    .project_section_empty {
+        font-size: var(--normal-font);
+        color: #5c5c5d;
+        font-style: italic;
+        margin: 0;
+        font-family: 'air-light', sans-serif;
+    }
+
+    .project_section--demos {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
   
     .go_button_container {
         display: none;

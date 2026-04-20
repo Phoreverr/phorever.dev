@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { resume } from '@/constants/resume';
 import myPic from '../../assets/imgs/my-pic.jpg';
 import arrow from '../../assets/svgs/arrow.svg';
 import navLine from '../../assets/svgs/menu-line.svg';
@@ -27,6 +28,20 @@ export default function Base({ menu }: any) {
           </p>
         </div>
 
+        <div className="certifications" aria-labelledby="certifications-heading">
+          <h2 id="certifications-heading" className="certifications_heading">
+            Certifications
+          </h2>
+          <ul className="certifications_list">
+            {resume.certifications.map((cert) => (
+              <li key={cert.title} className="certifications_item">
+                <span className="certifications_name">{cert.title}</span>
+                <span className="certifications_date">{cert.date}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="go_button_container">
           <Link to="/projects">
             <button className="explore">Explore ➜</button>
@@ -39,15 +54,6 @@ export default function Base({ menu }: any) {
           <li className={menu[0]}>
             <small>
               00
-              <Link to="/resume">
-                <img src={navLine} alt="menu bullet" /> RESUME
-              </Link>
-            </small>
-          </li>
-
-          <li className={menu[1]}>
-            <small>
-              01
               <Link to="/projects">
                 <img src={navLine} alt="menu bullet" /> PROJECTS
               </Link>

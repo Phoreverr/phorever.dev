@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import 'antd/dist/reset.css';
 import './App.scss';
 import logo from './assets/imgs/logo128.png';
@@ -7,11 +7,10 @@ import Base from './components/Base/base';
 import Mobile from './components/Base/mobile';
 import Error from './components/Error/error404';
 import Projects from './components/Projects/projects';
-import Resume from './components/Resume/resume';
 import Header from './components/Utils/Header/header';
 
 function App() {
-  const [menu, setMenu] = useState<string[]>(['active_menu', '', '']);
+  const [menu, setMenu] = useState<string[]>(['active_menu', '']);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,21 +20,8 @@ function App() {
   }, []);
 
   const activeMenu = (id: number) => {
-    switch (id) {
-      case 0:
-        setMenu(() => ['active_menu', '', '']);
-        break;
-
-      case 1:
-        setMenu(() => ['', 'active_menu', '']);
-        break;
-
-      case 2:
-        setMenu(() => ['', '', 'active_menu']);
-        break;
-
-      default:
-        break;
+    if (id === 0) {
+      setMenu(() => ['active_menu', '']);
     }
   };
 
@@ -52,8 +38,8 @@ function App() {
             <div>
               <Routes>
                 <Route path="/" element={<Mobile menu={menu} />} />
-                <Route path="/resume" element={<Resume menu={menu} activeMenu={activeMenu} />} />
                 <Route path="/projects" element={<Projects menu={menu} activeMenu={activeMenu} />} />
+                <Route path="/resume" element={<Navigate to="/projects" replace />} />
                 {/* <Route path="/contact" element={<Contact menu={menu} activeMenu={activeMenu} />} /> */}
                 <Route element={<Error />} />
               </Routes>
@@ -75,9 +61,9 @@ function App() {
             <div className="main">
               <div className="pages_container">
                 <Routes>
-                  <Route path="/" element={<Resume menu={menu} activeMenu={activeMenu} />} />
-                  <Route path="/resume" element={<Resume menu={menu} activeMenu={activeMenu} />} />
+                  <Route path="/" element={<Projects menu={menu} activeMenu={activeMenu} />} />
                   <Route path="/projects" element={<Projects menu={menu} activeMenu={activeMenu} />} />
+                  <Route path="/resume" element={<Navigate to="/projects" replace />} />
                   {/* <Route path="/contact" element={<Contact menu={menu} activeMenu={activeMenu} />} /> */}
                   <Route element={<Error />} />
                 </Routes>
