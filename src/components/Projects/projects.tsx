@@ -27,23 +27,12 @@ type Prop = {
 const projects: Project[] = [
   {
     id: uuid(),
-    title: 'NPM-Package: OpenCDP-Editor',
-    shortDescription: 'A React rich text editor component designed for OpenCDP',
-    longDescription: `The OpenCDP Editor is a feature-rich, customizable React component designed to provide a seamless and powerful rich text editing experience within modern web applications.
+    title: 'Cdp-editor',
+    shortDescription:
+      'A fully-featured rich text editor for crafting beautiful HTML emails. Inject dynamic attributes at the cursor from any external picker.',
+    longDescription: `Cdp-editor (@codematic.io/cdp-editor) is a fully-featured rich text editor aimed at crafting beautiful HTML emails inside larger products. It focuses on a polished editing surface, familiar formatting controls, and a workflow where teams can inject dynamic attributes at the cursor from any external picker—so merge tags, personalization fields, or CDP-driven tokens land exactly where the author intends.
 
-Developed with a focus on modularity and a contemporary developer workflow, this project demonstrates proficiency in building and styling reusable front-end components for enterprise-level user interfaces.
-
-Key Features & Technical Highlights:
-
-• Technology Stack: Built primarily with React (or Next.js/similar framework) and TypeScript for scalable, type-safe development.
-
-• Component Library: Utilizes Ant Design (or similar) to provide a professional, highly polished UI/UX for editor controls and layout.
-
-• Styling: Employed Tailwind CSS for a utility-first approach to styling, enabling rapid, responsive, and highly customizable UI implementation.
-
-• Functionality: Implements core rich text editing features, including formatting (bold, italics, lists), block management, and potentially media embedding.
-
-• Architecture: Designed as a reusable NPM package, emphasizing clear component structure, prop-based configuration, and maintainability for easy integration into various projects.`,
+Published as a reusable npm package with React, TypeScript, Tailwind CSS, and Ant Design–style tooling for the chrome around the editor, with a webpack-based build suitable for library consumers who need a drop-in email authoring experience.`,
     github: 'https://www.npmjs.com/package/@codematic.io/cdp-editor',
     live: 'https://cdp-editor-064.web.app/',
     stack: 'React + Webpack + TypeScript + TailwindCSS',
@@ -102,7 +91,68 @@ The frontend is built with the same stack as Havara—Next.js, React Query, Type
 ];
 
 // Standalone UI showcases (live URL, optional public github + isPrivate: false).
-const demoUiProjects: Project[] = [];
+const demoUiProjects: Project[] = [
+  {
+    id: uuid(),
+    title: 'Amiso',
+    shortDescription: 'Website and application design agency',
+    longDescription: `Amiso is presented as a website and application design agency demo: hero, services, pricing, testimonials, FAQ, and contact sections. Built to practice hierarchy, spacing, and responsive marketing layout rather than production content.`,
+    github: '',
+    live: 'https://demo-ui-nine-mocha.vercel.app/',
+    stack: 'HTML + CSS + JavaScript',
+    isPrivate: true,
+    isLive: true,
+    isUiDemo: true,
+  },
+  {
+    id: uuid(),
+    title: 'Moniz',
+    shortDescription: 'Smart web agency',
+    longDescription: `A business-focused agency demo built around the Moniz template direction: hero carousel, about and services blocks, progress-style capability callouts, FAQ, and customer feedback sections. Intended as a UI exercise in typography, section rhythm, and conversion-oriented layout.`,
+    github: '',
+    live: 'https://demo-ui-k4cx.vercel.app/',
+    stack: 'HTML + CSS + JavaScript',
+    isPrivate: true,
+    isLive: true,
+    isUiDemo: true,
+  },
+  {
+    id: uuid(),
+    title: 'Frisk',
+    shortDescription: 'Next generation digital agency',
+    longDescription: `Creative agency and portfolio-style demo in the Frisk template vein: bold hero, services grid, portfolio highlights, team, testimonials, and blog-style content blocks—focused on immersive layout and editorial typography.`,
+    github: '',
+    live: 'https://demo-ui-md3s.vercel.app/',
+    stack: 'HTML + CSS + JavaScript',
+    isPrivate: true,
+    isLive: true,
+    isUiDemo: true,
+  },
+  {
+    id: uuid(),
+    title: 'Beeko',
+    shortDescription: 'Comprehensive Business Consulting',
+    longDescription: `Business consulting landing demo in the Beeko template style: hero with credibility metrics, service pillars, company story, FAQ accordion, testimonials, and lead-capture sections—practice in corporate tone, data callouts, and conversion layout.`,
+    github: '',
+    live: 'https://demo-ui-ppq2.vercel.app/',
+    stack: 'HTML + CSS + JavaScript',
+    isPrivate: true,
+    isLive: true,
+    isUiDemo: true,
+  },
+  {
+    id: uuid(),
+    title: 'Digtek',
+    shortDescription: 'Digital marketing agency',
+    longDescription: `Digital marketing agency demo in the Digtek template direction: “think digital” hero, service pillars (SEO, social, analytics), skills and team sections, pricing plans, testimonials, FAQ, and contact—practice in campaign-style messaging and growth-focused layout.`,
+    github: '',
+    live: 'https://demo-ui-andd.vercel.app/',
+    stack: 'HTML + CSS + JavaScript',
+    isPrivate: true,
+    isLive: true,
+    isUiDemo: true,
+  },
+];
 
 export default function Projects(props: Prop) {
   useEffect(() => {
