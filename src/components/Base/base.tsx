@@ -66,10 +66,6 @@ export default function Base() {
           <a href="https://linkedin.com/in/phorever" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i> LinkedIn <img src={arrow} alt="pointer" />
           </a>
-
-          <a href={portfolioCvUrl} target="_blank" rel="noopener noreferrer">
-            <i className="far fa-file-alt"></i> CV <img src={arrow} alt="pointer" />
-          </a>
         </div>
       </div>
     </div>
