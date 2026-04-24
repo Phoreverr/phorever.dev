@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { portfolioCvUrl, resume } from '@/constants/resume';
+import { resume } from '@/constants/resume';
 import myPic from '../../assets/imgs/my-pic.jpg';
 import arrow from '../../assets/svgs/arrow.svg';
 import './base.scss';
@@ -49,9 +49,9 @@ export default function Base() {
               Explore ➜
             </button>
           </Link>
-          <a className="base_cv_link" href={portfolioCvUrl} target="_blank" rel="noopener noreferrer">
+          {/* <a className="base_cv_link" href={portfolioCvUrl} target="_blank" rel="noopener noreferrer">
             View CV ↗
-          </a>
+          </a> */}
         </div>
       </div>
 
