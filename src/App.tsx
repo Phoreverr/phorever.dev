@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import 'antd/dist/reset.css';
 import './App.scss';
 import logo from './assets/imgs/logo128.png';
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <Analytics />
       {isLoading ? (
         <div className="flex justify-center align-middle !h-full !w-full">
           {/* <img className=" w-20 loader" src={logo} alt="loader" /> */}
