@@ -84,25 +84,32 @@ export default function Project(props: IProject) {
         onOk={handleOk}
         onCancel={handleCancel}
         width={600}
+        rootClassName="project_modal"
+        styles={{
+          container: { background: '#0d0d0e' },
+          header: { background: '#0d0d0e' },
+          body: { background: '#0d0d0e' },
+          footer: { background: '#0d0d0e' },
+        }}
         footer={[
-          <div key="footer" style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
+          <div key="footer" className="project_modal_actions">
             {isLive && (
-              <a href={live} target="_blank" rel="noopener noreferrer">
-                <button style={{ padding: '8px 16px', cursor: 'pointer' }}>
+              <a className="project_modal_action--primary" href={live} target="_blank" rel="noopener noreferrer">
+                <button>
                   <i className="far fa-eye"></i> View Live
                 </button>
               </a>
             )}
             {!isPrivate && github && (
               <a href={github} target="_blank" rel="noopener noreferrer">
-                <button style={{ padding: '8px 16px', cursor: 'pointer' }}>
+                <button>
                   <i className="fas fa-code-branch"></i> {github2 ? 'Frontend Code' : 'View Code'}
                 </button>
               </a>
             )}
             {github2 && (
               <a href={github2} target="_blank" rel="noopener noreferrer">
-                <button style={{ padding: '8px 16px', cursor: 'pointer' }}>
+                <button>
                   <i className="fas fa-code-branch"></i> Backend Code
                 </button>
               </a>
@@ -110,22 +117,32 @@ export default function Project(props: IProject) {
           </div>
         ]}
       >
-        <div style={{ padding: '20px 0' }}>
-          <h4 style={{ marginBottom: '12px', fontSize: '16px', fontWeight: '600' }}>Description</h4>
-          <p style={{ marginBottom: '20px', lineHeight: '1.6', whiteSpace: 'pre-line' }}>{longDescription}</p>
+        <div className="project_modal_body">
+          <h4 className="project_modal_label">Description</h4>
+          <p className="project_modal_description">{longDescription}</p>
 
-          <h4 style={{ marginBottom: '12px', fontSize: '16px', fontWeight: '600' }}>Tech Stack</h4>
-          <p style={{ marginBottom: '20px', lineHeight: '1.6' }}>{stack}</p>
+          <h4 className="project_modal_label">Tech Stack</h4>
+          <div className="project_modal_stack">
+            {stack.split('+').map((tech) => (
+              <span key={tech} className="project_modal_chip">
+                {tech.trim()}
+              </span>
+            ))}
+          </div>
 
           {isPrivate && isUiDemo && (
-            <p style={{ color: '#888', fontStyle: 'italic', lineHeight: 1.55 }}>
-              <i className="fas fa-palette"></i> UI demo—repository not linked here. All figures, copy, and business
-              details in the live preview are placeholder content for layout and are not factual.
+            <p className="project_modal_note">
+              <i className="fas fa-palette"></i>
+              <span>
+                UI demo. Repository not linked here. All figures, copy, and business details in the live preview are
+                placeholder content for layout and are not factual.
+              </span>
             </p>
           )}
           {isPrivate && !isUiDemo && (
-            <p style={{ color: '#888', fontStyle: 'italic' }}>
-              <i className="fas fa-lock"></i> This is a private project
+            <p className="project_modal_note">
+              <i className="fas fa-lock"></i>
+              <span>This is a private project</span>
             </p>
           )}
         </div>

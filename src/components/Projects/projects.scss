@@ -13,10 +13,23 @@
     }
 
     .project_section_title {
+        position: relative;
         font-size: var(--project-font);
         font-weight: 600;
-        margin: 0 0 0.35rem;
+        margin: 0 0 0.9rem;
+        padding-bottom: 0.6rem;
         letter-spacing: 0.02em;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 38px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            border-radius: 2px;
+        }
     }
 
     .project_section_lede {

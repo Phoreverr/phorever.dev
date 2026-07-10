@@ -12,6 +12,10 @@
 /build
 /dist
 
+# tooling
+.claude
+.tokensave
+
 # misc
 .DS_Store
 .env.local

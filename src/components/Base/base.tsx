@@ -23,7 +23,7 @@ export default function Base() {
             <span>
               I'm a <span className="highlight">Frontend Engineer</span>: I build responsive, performant UIs and
               care about product polish and maintainable code. On the side I'm a{' '}
-              <span className="highlight">Cloud Engineer</span>—GCP is my main platform—for secure deployments,
+              <span className="highlight">Cloud Engineer</span>. GCP is my main platform for secure deployments,
               networking, and infrastructure that keeps apps reliable in production.
             </span>
           </p>

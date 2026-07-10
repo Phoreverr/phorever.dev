@@ -2,32 +2,32 @@
 
 @font-face {
   font-family: 'air-regular';
-  src: url('./assets/fonts/AirbnbCereal-Book.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  src: url('./assets/fonts/AirbnbCereal-Book.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
 }  
 
 @font-face {
   font-family: 'air-semibold';
-  src: url('./assets/fonts/AirbnbCereal-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  src: url('./assets/fonts/AirbnbCereal-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
 } 
 
 @font-face {
   font-family: 'air-light';
-  src: url('./assets/fonts/AirbnbCereal-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  src: url('./assets/fonts/AirbnbCereal-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
 } 
 
 @font-face {
   font-family: 'air-bold';
-  src: url('./assets/fonts/AirbnbCereal-Bold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  src: url('./assets/fonts/AirbnbCereal-Bold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
 } 
 
 @font-face {
   font-family: 'air-extrabold';
-  src: url('./assets/fonts/AirbnbCereal-ExtraBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  src: url('./assets/fonts/AirbnbCereal-ExtraBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
 } 
 
 @font-face {
   font-family: 'air-black';
-  src: url('./assets/fonts/AirbnbCereal-Black.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  src: url('./assets/fonts/AirbnbCereal-Black.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
 } 
 
 html, body {
@@ -35,7 +35,11 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'air-regular';
-  background: #101011;
+  background-color: #0d0d0e;
+  background-image:
+    radial-gradient(60rem 60rem at 12% -10%, rgba(212, 175, 55, 0.08), transparent 60%),
+    radial-gradient(50rem 50rem at 105% 108%, rgba(212, 175, 55, 0.06), transparent 55%);
+  background-attachment: fixed;
   color: #fff;
 }
 
@@ -116,6 +120,16 @@ body {
   --normal-font: 14px;
   --small-font: 13px;
   --xsmall-font: 12px;
+
+  /* ===== Black + gold theme ===== */
+  --gold: #d4af37;
+  --gold-light: #f0d98c;
+  --gold-dim: rgba(212, 175, 55, 0.55);
+  --gold-faint: rgba(212, 175, 55, 0.14);
+  --gold-glow: rgba(212, 175, 55, 0.22);
+  --surface: #141417;
+  --surface-hover: #1a1a1f;
+  --hairline: rgba(255, 255, 255, 0.08);
 }
 
 @media (min-width: 1440px) {

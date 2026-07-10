@@ -25,7 +25,7 @@ const projects: Project[] = [
     title: 'Cdp-editor',
     shortDescription:
       'A fully-featured rich text editor for crafting beautiful HTML emails. Inject dynamic attributes at the cursor from any external picker.',
-    longDescription: `Cdp-editor (@codematic.io/cdp-editor) is a fully-featured rich text editor aimed at crafting beautiful HTML emails inside larger products. It focuses on a polished editing surface, familiar formatting controls, and a workflow where teams can inject dynamic attributes at the cursor from any external picker—so merge tags, personalization fields, or CDP-driven tokens land exactly where the author intends.
+    longDescription: `Cdp-editor (@codematic.io/cdp-editor) is a fully-featured rich text editor aimed at crafting beautiful HTML emails inside larger products. It focuses on a polished editing surface, familiar formatting controls, and a workflow where teams can inject dynamic attributes at the cursor from any external picker, so merge tags, personalization fields, or CDP-driven tokens land exactly where the author intends.
 
 Published as a reusable npm package with React, TypeScript, Tailwind CSS, and Ant Design–style tooling for the chrome around the editor, with a webpack-based build suitable for library consumers who need a drop-in email authoring experience.`,
     github: 'https://www.npmjs.com/package/@codematic.io/cdp-editor',
@@ -51,12 +51,12 @@ The focus of the residence is to provide an exclusive, high-end experience, like
     id: uuid(),
     title: 'Conviso',
     shortDescription:
-      'Behavioural messaging for growing teams—automated journeys across email, WhatsApp, and push in one platform.',
+      'Behavioural messaging for growing teams, with automated journeys across email, WhatsApp, and push in one platform.',
     longDescription: `Conviso delivers it across Email, WhatsApp and Push automatically, and at a fraction of what Braze or Customer.io costs you.
 
 Conviso is a behavioural messaging platform for growing teams: it turns user signals into automated engagement across email, WhatsApp, and push. The product brings segmentation, journeys, and multi-channel delivery into one place so teams can re-engage signups and reduce churn without stitching together separate tools.
 
-The frontend is built with the same stack as Havara—Next.js, React Query, TypeScript, Tailwind CSS, and API integration—for a fast, consistent marketing and product experience.`,
+The frontend is built with the same stack as Havara (Next.js, React Query, TypeScript, Tailwind CSS, and API integration) for a fast, consistent marketing and product experience.`,
     github: '',
     live: 'https://conviso.ai/',
     stack: 'Nextjs + ReactQuery + TypeScript + TailwindCSS + API Integration',
@@ -115,7 +115,7 @@ const demoUiProjects: Project[] = [
     id: uuid(),
     title: 'Frisk',
     shortDescription: 'Next generation digital agency',
-    longDescription: `Creative agency and portfolio-style demo in the Frisk template vein: bold hero, services grid, portfolio highlights, team, testimonials, and blog-style content blocks—focused on immersive layout and editorial typography.`,
+    longDescription: `Creative agency and portfolio-style demo in the Frisk template vein: bold hero, services grid, portfolio highlights, team, testimonials, and blog-style content blocks, focused on immersive layout and editorial typography.`,
     github: '',
     live: 'https://demo-ui-md3s.vercel.app/',
     stack: 'HTML + CSS + JavaScript',
@@ -127,7 +127,7 @@ const demoUiProjects: Project[] = [
     id: uuid(),
     title: 'Beeko',
     shortDescription: 'Comprehensive Business Consulting',
-    longDescription: `Business consulting landing demo in the Beeko template style: hero with credibility metrics, service pillars, company story, FAQ accordion, testimonials, and lead-capture sections—practice in corporate tone, data callouts, and conversion layout.`,
+    longDescription: `Business consulting landing demo in the Beeko template style: hero with credibility metrics, service pillars, company story, FAQ accordion, testimonials, and lead-capture sections, practice in corporate tone, data callouts, and conversion layout.`,
     github: '',
     live: 'https://demo-ui-ppq2.vercel.app/',
     stack: 'HTML + CSS + JavaScript',
@@ -139,7 +139,7 @@ const demoUiProjects: Project[] = [
     id: uuid(),
     title: 'Digtek',
     shortDescription: 'Digital marketing agency',
-    longDescription: `Digital marketing agency demo in the Digtek template direction: “think digital” hero, service pillars (SEO, social, analytics), skills and team sections, pricing plans, testimonials, FAQ, and contact—practice in campaign-style messaging and growth-focused layout.`,
+    longDescription: `Digital marketing agency demo in the Digtek template direction: “think digital” hero, service pillars (SEO, social, analytics), skills and team sections, pricing plans, testimonials, FAQ, and contact, practice in campaign-style messaging and growth-focused layout.`,
     github: '',
     live: 'https://demo-ui-andd.vercel.app/',
     stack: 'HTML + CSS + JavaScript',
@@ -163,7 +163,7 @@ export default function Projects() {
           Client &amp; product work
         </h2>
         <p className="project_section_lede">
-          Production work and shipped products—web apps, customer-facing sites, and shared libraries I've helped
+          Production work and shipped products: web apps, customer-facing sites, and shared libraries I've helped
           build or own end to end with real users and constraints. Each card links to a live product or package where
           that's public; private engagements are marked accordingly.
         </p>
@@ -179,7 +179,7 @@ export default function Projects() {
           UI skill demos
         </h2>
         <p className="project_section_lede">
-          Standalone interfaces built as UI demos to highlight layout, interaction, and visual design—separate from
+          Standalone interfaces built as UI demos to highlight layout, interaction, and visual design, separate from
           shipped products. Names, metrics, testimonials, pricing, and other on-screen data are illustrative only and
           not real.
         </p>
