@@ -49,8 +49,8 @@ export default function Header() {
 
             <div className="social_box">
               <h3>Connect With Me</h3>
-              <a href="mailto:oluwayomiforever@gmail.com" className="mt-4">
-                oluwayomiforever@gmail.com
+              <a href="mailto:phorever064@gmail.com" className="mt-4">
+                phorever064@gmail.com
               </a>
               <div className="social_icons">
                 <a href="https://github.com/Phoreverr">
