@@ -9,6 +9,7 @@ import Mobile from './components/Base/mobile';
 import Error from './components/Error/error404';
 import Projects from './components/Projects/projects';
 import Header from './components/Utils/Header/header';
+import MainScrollHint from './components/Utils/ScrollHint/scroll-hint';
 
 function App() {
   const [isLoading, setLoading] = useState(true);
@@ -53,16 +54,19 @@ function App() {
             <div className="m-fixed">
               <Base />
             </div>
-            <div className="main">
-              <div className="pages_container">
-                <Routes>
-                  <Route path="/" element={<Projects />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/resume" element={<Navigate to="/projects" replace />} />
-                  {/* <Route path="/contact" element={<Contact menu={menu} activeMenu={activeMenu} />} /> */}
-                  <Route element={<Error />} />
-                </Routes>
+            <div className="main_panel">
+              <div className="main">
+                <div className="pages_container">
+                  <Routes>
+                    <Route path="/" element={<Projects />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/resume" element={<Navigate to="/projects" replace />} />
+                    {/* <Route path="/contact" element={<Contact menu={menu} activeMenu={activeMenu} />} /> */}
+                    <Route element={<Error />} />
+                  </Routes>
+                </div>
               </div>
+              <MainScrollHint />
             </div>
           </div>
         </BrowserRouter>
