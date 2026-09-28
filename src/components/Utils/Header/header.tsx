@@ -1,6 +1,5 @@
 import React, { Component, useState } from 'react';
 // import logo from '../../../assets/svgs/logo.svg';
-import { portfolioCvUrl } from '@/constants/resume';
 import { Link } from 'react-router-dom';
 import './header.scss';
 
@@ -39,11 +38,6 @@ export default function Header() {
                 <Link to="/projects" onClick={toggleMenu}>
                   Work
                 </Link>
-              </li>
-              <li>
-                <a href={portfolioCvUrl} target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
-                  CV
-                </a>
               </li>
             </ul>
 

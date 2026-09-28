@@ -8,7 +8,7 @@
   }
   
   #mobile .base_container {
-    padding: 0;
+    padding: 0 5%;
     height: auto;
     flex-grow: unset;
   }
@@ -22,27 +22,34 @@
   }
   
   #mobile .base_container .hero {
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
   }
   
   #mobile .base_container .hero .intro_box {
-    flex-direction: column-reverse;
-    margin: 0;
+    margin: 0 0 1.5rem;
   }
   
   #mobile .base_container .hero .intro_box h1 {
     font-size: 26px;
-    text-align: center;
+    text-align: left;
     margin: 0;
     line-height: 1.5;
-    padding: 15px;
-    padding-bottom: 0;
+    padding: 15px 0 0;
   }
-  
+
   #mobile .base_container .hero .description {
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     padding: 0;
+    width: 100%;
+  }
+
+  #mobile .base_container .certifications {
+    width: 100%;
+    text-align: left;
+    margin-top: 2rem;
   }
   
   #mobile .base_container .hero .intro_box h1 br {
@@ -68,8 +75,9 @@
   .mobile_container .social_buttons .credits {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
     box-sizing: border-box;
     padding: .5rem 0 0;
     margin: 0;
@@ -81,7 +89,7 @@
     box-sizing: border-box;
     margin: .2rem 0 0;
     padding: 0;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: var(--xsmall-font) !important;
     color: #777778;
   }
@@ -100,6 +108,7 @@
     display: flex;
     justify-content: center;
     margin: 20px 0 0;
+    width: 100%;
   }
   
   .go_button_container a {

@@ -6,9 +6,8 @@
   .main_scroll_hint {
     display: flex;
     position: absolute;
-    left: 50%;
+    left: 1.25rem;
     bottom: 1.25rem;
-    transform: translateX(-50%);
     z-index: 10;
     pointer-events: none;
   }
@@ -17,14 +16,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2.85rem;
+    height: 2.85rem;
     border-radius: 999px;
     border: 1px solid var(--gold-dim);
     background: linear-gradient(180deg, rgba(20, 20, 23, 0.92), rgba(13, 13, 14, 0.88));
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.04);
     color: var(--gold-light);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     animation: main_scroll_hint_bounce 1.8s ease-in-out infinite;
   }
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { resume } from '@/constants/resume';
-import myPic from '../../assets/imgs/my-pic.jpg';
 import arrow from '../../assets/svgs/arrow.svg';
 import './base.scss';
 
@@ -11,20 +10,25 @@ export default function Base() {
       <div className="hero">
         <div className="intro_box">
           <h1>
-            Hello! I'm <br /> Forever Oluwayomi.
+            Hi there, I'm <br /> Forever.
           </h1>
-          <div className="my-pic">
-            <img className="w-48 h-48 rounded-full" src={myPic} alt="my-avatar" />
-          </div>
         </div>
 
         <div className="description">
-          <p>
+          <p className="description_lead">
+            <span>Honestly? Every day is a step closer to being among the best in the world at this craft.</span>
+          </p>
+          <p className="description_body">
             <span>
-              I'm a <span className="highlight">Frontend Engineer</span>: I build responsive, performant UIs and
-              care about product polish and maintainable code. On the side I'm a{' '}
-              <span className="highlight">Cloud Engineer</span>. GCP is my main platform for secure deployments,
-              networking, and infrastructure that keeps apps reliable in production.
+              Five years in <span className="highlight">React, Next.js, and TypeScript</span>. I own{' '}
+              <span className="highlight">frontend architecture</span>—fast systems, heavy data, enterprise polish,
+              built to scale.
+            </span>
+          </p>
+          <p className="description_body">
+            <span>
+              I'm also a certified <span className="highlight">Cloud Engineer</span> with three Google Cloud certs
+              under my belt—connecting UI performance to infrastructure.
             </span>
           </p>
         </div>
@@ -49,14 +53,10 @@ export default function Base() {
               Explore ➜
             </button>
           </Link>
-          {/* <a className="base_cv_link" href={portfolioCvUrl} target="_blank" rel="noopener noreferrer">
-            View CV ↗
-          </a> */}
         </div>
       </div>
 
       <div className="footer">
-        <img className="w-16 h-16 rounded-full" src={myPic} alt="" />
         <div className="social">
           <a href="https://github.com/Phoreverr" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i> Github

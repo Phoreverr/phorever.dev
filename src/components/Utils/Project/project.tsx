@@ -6,19 +6,16 @@ interface IProject {
   id: string;
   title: string;
   shortDescription: string;
-  longDescription: string;
   github?: string;
   github2?: string;
   live?: string;
   stack: string;
   isPrivate: boolean;
   isLive: boolean;
-  /** When true with isPrivate, modal copy reflects a UI showcase instead of client confidentiality. */
-  isUiDemo?: boolean;
 }
 
 export default function Project(props: IProject) {
-  const { title, shortDescription, longDescription, github, live, stack, isPrivate, isLive, github2, isUiDemo } = props;
+  const { title, shortDescription, github, live, stack, isPrivate, isLive, github2 } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -118,8 +115,7 @@ export default function Project(props: IProject) {
         ]}
       >
         <div className="project_modal_body">
-          <h4 className="project_modal_label">Description</h4>
-          <p className="project_modal_description">{longDescription}</p>
+          <p className="project_modal_description">{shortDescription}</p>
 
           <h4 className="project_modal_label">Tech Stack</h4>
           <div className="project_modal_stack">
@@ -130,16 +126,7 @@ export default function Project(props: IProject) {
             ))}
           </div>
 
-          {isPrivate && isUiDemo && (
-            <p className="project_modal_note">
-              <i className="fas fa-palette"></i>
-              <span>
-                UI demo. Repository not linked here. All figures, copy, and business details in the live preview are
-                placeholder content for layout and are not factual.
-              </span>
-            </p>
-          )}
-          {isPrivate && !isUiDemo && (
+          {isPrivate && (
             <p className="project_modal_note">
               <i className="fas fa-lock"></i>
               <span>This is a private project</span>
