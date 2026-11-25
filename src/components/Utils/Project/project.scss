@@ -52,6 +52,20 @@
     transition: color 0.25s ease;
   }
 
+  .project_card_category {
+    align-self: flex-end;
+    margin-bottom: 0.6rem;
+    padding: 0.2rem 0.65rem;
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    color: var(--gold-light);
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid var(--gold-faint);
+    border-radius: 999px;
+  }
+
   .project_card_summary {
     margin: 0;
     padding: 0;

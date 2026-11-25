@@ -126,6 +126,38 @@ html, body {
 
   .app-container .m-fixed .base_container {
     padding: 7.5% 11% 7.5% 8%;
+    /* Keep the social links clear of the certifications */
+    gap: 3rem;
+    align-self: flex-start;
+    min-height: 100%;
+  }
+
+  /* Scroll the sidebar when the window is too short to fit it */
+  .app-container .m-fixed {
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+}
+
+/* Tighten the sidebar on short desktop screens */
+@media (min-width: 994px) and (max-height: 800px) {
+  .app-container .m-fixed .base_container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 2.25rem;
+  }
+
+  .app-container .m-fixed .intro_box {
+    margin-bottom: 1.25rem;
+  }
+
+  .app-container .m-fixed .certifications {
+    margin-top: 1.5rem;
+  }
+
+  .app-container .m-fixed .certifications_item {
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.4rem;
   }
 }
 

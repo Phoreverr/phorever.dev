@@ -16,19 +16,23 @@ export default function Base() {
 
         <div className="description">
           <p className="description_lead">
-            <span>Honestly? Every day is a step closer to being among the best in the world at this craft.</span>
-          </p>
-          <p className="description_body">
             <span>
-              Five years in <span className="highlight">React, Next.js, and TypeScript</span>. I own{' '}
-              <span className="highlight">frontend architecture</span>—fast systems, heavy data, enterprise polish,
-              built to scale.
+              I'm a <span className="highlight">Senior Frontend Engineer</span> who turns complex products into fast,
+              dependable interfaces.
             </span>
           </p>
           <p className="description_body">
             <span>
-              I'm also a certified <span className="highlight">Cloud Engineer</span> with three Google Cloud certs
-              under my belt—connecting UI performance to infrastructure.
+              Over five years with <span className="highlight">React, Next.js, and TypeScript</span>, I've shipped
+              customer platforms, data-heavy dashboards, and published NPM packages. I own{' '}
+              <span className="highlight">frontend architecture</span>, review the code that shapes it, and build the
+              tools that help teams ship faster.
+            </span>
+          </p>
+          <p className="description_body">
+            <span>
+              I also hold <span className="highlight">four Google Cloud certifications</span>, so I think beyond the
+              browser: how the UI is served, scaled, and kept fast in production.
             </span>
           </p>
         </div>

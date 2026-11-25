@@ -106,6 +106,10 @@ const educations: Education[] = [
 
 const certifications: Certification[] = [
   {
+    title: 'Google Cloud - Generative AI Leader Certification',
+    date: 'Nov 2026',
+  },
+  {
     title: 'Google Cloud - Professional Cloud Developer Certification',
     date: 'Mar 2026',
   },
