@@ -5,6 +5,7 @@ import './project.scss';
 interface IProject {
   id: string;
   title: string;
+  category: string;
   shortDescription: string;
   github?: string;
   github2?: string;
@@ -15,7 +16,7 @@ interface IProject {
 }
 
 export default function Project(props: IProject) {
-  const { title, shortDescription, github, live, stack, isPrivate, isLive, github2 } = props;
+  const { title, category, shortDescription, github, live, stack, isPrivate, isLive, github2 } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -34,6 +35,7 @@ export default function Project(props: IProject) {
     <>
       <div className="box_container md:hover:shadow-xs md:hover:z-50" onClick={showModal} style={{ cursor: 'pointer' }}>
         <div className="box">
+          <span className="project_card_category">{category}</span>
           <div className="project_details">
             <h3>{title}</h3>
             <p className="project_card_summary">{shortDescription}</p>

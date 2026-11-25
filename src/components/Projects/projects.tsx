@@ -8,6 +8,7 @@ import './projects.scss';
 type Project = {
   id: string;
   title: string;
+  category: string;
   shortDescription: string;
   github?: string;
   github2?: string;
@@ -20,7 +21,20 @@ type Project = {
 const projects: Project[] = [
   {
     id: uuid(),
+    title: 'Conviso',
+    category: 'B2B Platform',
+    shortDescription:
+      'Behavioural messaging for growing teams—automated journeys across email, WhatsApp, and push in one platform.',
+    github: '',
+    live: 'https://conviso.ai/',
+    stack: 'Nextjs + ReactQuery + TypeScript + TailwindCSS + API Integration',
+    isPrivate: true,
+    isLive: true,
+  },
+  {
+    id: uuid(),
     title: 'Cdp-editor',
+    category: 'NPM Package',
     shortDescription:
       'A fully-featured rich text editor for crafting beautiful HTML emails. Inject dynamic attributes at the cursor from any external picker.',
     github: 'https://www.npmjs.com/package/@codematic.io/cdp-editor',
@@ -32,6 +46,7 @@ const projects: Project[] = [
   {
     id: uuid(),
     title: 'Havara',
+    category: 'Booking Platform',
     shortDescription: 'A premium beach houses and coastal residences rental platform',
     github: '',
     live: 'https://www.havara.com/',
@@ -41,22 +56,48 @@ const projects: Project[] = [
   },
   {
     id: uuid(),
-    title: 'Conviso',
+    title: 'ROE Weddings',
+    category: 'Business Website',
     shortDescription:
-      'Behavioural messaging for growing teams—automated journeys across email, WhatsApp, and push in one platform.',
+      'Luxury wedding planning across Barbados, the UK, and beyond—event portfolio, client stories, and enquiries.',
     github: '',
-    live: 'https://conviso.ai/',
-    stack: 'Nextjs + ReactQuery + TypeScript + TailwindCSS + API Integration',
+    live: 'https://www.roeweddings.com/',
+    stack: 'Nextjs + TailwindCSS + Google Cloud Storage',
     isPrivate: true,
     isLive: true,
   },
   {
     id: uuid(),
     title: 'Propel Africa',
+    category: 'Web Platform',
     shortDescription: 'A platform designed to support African professionals by connecting them with resources',
     github: '',
     live: 'https://propel.africa/',
     stack: 'Nextjs + ReduxToolkit + TypeScript + TailwindCSS',
+    isPrivate: true,
+    isLive: true,
+  },
+  {
+    id: uuid(),
+    title: 'Hibiscus Infusion',
+    category: 'Brand Website',
+    shortDescription:
+      'A product site for a natural hibiscus drinks brand, showcasing its drinks, ingredients, and health benefits.',
+    github: '',
+    live: 'https://hibiscusfusion.com/',
+    stack: 'React + Vite + TailwindCSS',
+    isPrivate: true,
+    isLive: true,
+  },
+  {
+    id: uuid(),
+    title: 'Golden Compliance',
+    category: 'Corporate Website',
+    shortDescription:
+      'A bilingual English and French website for a Dubai compliance consultancy, with services, a blog, and contact enquiries.',
+    github: '',
+    live: 'https://goldencompliance.com/',
+    stack: 'HTML + JavaScript + TailwindCSS + i18next',
     isPrivate: true,
     isLive: true,
   },
