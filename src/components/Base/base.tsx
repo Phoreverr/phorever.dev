@@ -62,6 +62,11 @@ export default function Base() {
 
       <div className="footer">
         <div className="social">
+          <a href="mailto:phorever064@gmail.com">
+            <i className="fas fa-envelope"></i> Email me
+            <img src={arrow} alt="" />
+          </a>
+
           <a href="https://github.com/Phoreverr" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i> Github
             <img src={arrow} alt="pointer" />
