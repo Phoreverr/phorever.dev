@@ -101,6 +101,18 @@ const projects: Project[] = [
     isPrivate: true,
     isLive: true,
   },
+  {
+    id: uuid(),
+    title: '3D Plug',
+    category: 'Corporate Website',
+    shortDescription:
+      'A website for an African maker of 3D-printed lab consumables, presenting its design, printing, and consulting services.',
+    github: '',
+    live: 'https://3dplug.com/',
+    stack: 'HTML + JavaScript + TailwindCSS + Swiper',
+    isPrivate: true,
+    isLive: true,
+  },
 ];
 
 export default function Projects() {
